@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Q3 Seatwork 2</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <style>
+      	body{
+      		font-family: Rockwell;
+            background-color: #415a77;
+      		}
+      	
+        span{
+      		font-size: 40px;
+      		color: #1b263b;
+      		}
+      	
+        #Cassie{
+      		margin-top: 60px;
+      		height: 370px;
+      		width: 400px;
+      	}
+     	#box{
+     		border: 2px dashed midnightblue;
+     	}
+     	#numX, #numY{
+     		background-color: #1b263b;
+     		color: #e0e1dd;
+     		font-size: 30px;
+     	}
+     	#info{
+     		height: 35px;
+     		width:35px;
+     	}
+      
+    </style>
+</head>
+
+<body>
+    <br><br>
+
+    <div class="container">
+    <div class="row">
+
+    <div class="col-md-5">
+    		<img src="https://i.pinimg.com/736x/2d/84/bd/2d84bdf4abd6f05f6efa07a5008d0d98.jpg" id="Cassie">
+    </div>
+
+   
+    <div class="col-md-6" id="box">
+    <h3>Hi, my name is <span>Cassie</span>. Your helping hand Math Cat Wiz <br><br> Given: 
+     </h3>
+     <h5>
+    	<form class="form-group">
+        	<label>Enter a value for <kbd>a</kbd>:</label><br><br>
+        	<input class="form-control btn-primary" type="number" id="numA">
+        	<br>
+        	<label>Enter a value for <kbd>b</kbd>:</label><br><br>
+        	<input class="form-control btn-primary" type="number" id="numB">
+        	<br><br>
+
+        	<details ontoggle="message()">
+    			<summary>Click here</summary>
+    				<i>Click buttons below to calculate meow.</i>
+    		</details>
+
+    	</form>
+    </h5>
+		
+    </div>
+</div>
+</div>
+    <script>
+    function product(){
+    var numA=document.getElementById("numA").value;
+    var numB=document.getElementById("numB").value;
+    var prod=numA * numB;
+    window.alert('The product of a and b is ' + prod );
+    }
+	
+    function power(){
+    var numA=document.getElementById("numA").value;
+    var numB=document.getElementById("numB").value;
+    var exp=numA ** numB;
+    window.alert('a raised to b is ' + exp );
+    	
+    }
+     
+    function remainder(){
+    var numA=document.getElementById("numA").value;
+    var numB=document.getElementById("numB").value;
+    var mod=numA % numB;
+    window.alert('The remainder is ' + mod );
+    	
+    }
+     
+
+    function compare(){
+    var numA=document.getElementById("numA").value;
+    var numB=document.getElementById("numB").value;
+    var comp=Number(numA) == Number(numB);
+    window.alert('Is a equal to b? Answer: ' + comp );
+    	
+    }
+
+
+    function message() {
+			  alert("lesgaur!");
+			}
+    </script>
+
+    <br><br><br>
+
+    <div class="container">
+    <div class="row">
+  	
+	    <div class="col-md-6 d-grid">
+	    <button onclick="product()" type="submit" class="btn btn-primary btn-block">product of a and b</button>
+	   </div>
+
+	    <div class="col-md-6 d-grid">
+	   <button onclick="power()" type="submit" class="btn btn-primary btn-block">a raise to b</button>
+	    </div>
+	
+	</div>
+<br>
+	<div class="row">
+  
+	    <div class="col-md-6 d-grid">
+	    <button onclick="remainder()" type="submit" class="btn btn-info btn-block">get the remainder</button>
+	     </div>
+
+	    <div class="col-md-6 d-grid">
+	    <button onclick="compare()" type="submit" class="btn btn-info btn-block">check if a is equal to b</button>
+	    </div>
+  
+    </div>
+
+
+</body>
+</html>
